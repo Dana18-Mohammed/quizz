@@ -14,8 +14,9 @@ class NetworkHelper {
         if (data.isNotEmpty) {
           final Map<String, dynamic> firstItem = data[0];
           final String content = firstItem['content'];
+          final String author = firstItem['author'];
           final List<dynamic> tags = firstItem['tags'];
-          return {'content': content, 'tags': tags};
+          return {'content': content, 'tags': tags, 'author': author};
         }
       } else {
         print('Request failed with status: ${response.statusCode}');
