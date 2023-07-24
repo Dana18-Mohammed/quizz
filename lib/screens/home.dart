@@ -1,11 +1,8 @@
-import 'dart:typed_data';
 import 'dart:ui' as ui;
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/foundation.dart';
-import 'package:quiz_gsg/Network_helper/data_helper.dart';
 import 'package:quiz_gsg/screens/qoute_content_screen.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -33,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> fetchDataAndImage() async {
-    final data = await DataHelper().fetchDataQuoteAndImage();
+    final data = await NetworkHelper().fetchDataQuoteAndImage();
     setState(() {
       content = data['content'] ?? 'Failed to fetch content.';
       author = data['author'] ?? 'Failed to fetch author name.';
