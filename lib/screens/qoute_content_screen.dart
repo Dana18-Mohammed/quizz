@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
 import '../Network_helper/network_helper.dart';
 
 class QuoteContent extends StatefulWidget {
